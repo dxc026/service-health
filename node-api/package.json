@@ -1,0 +1,19 @@
+{
+  "name": "service-node-api",
+  "version": "1.0.0",
+  "description": "Node API to get service health information from S3",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.1055.0",
+    "cors": "^2.8.5",
+    "dotenv": "^11.0.0",
+    "express": "^4.17.2",
+    "express-openapi": "^10.0.0",
+    "lodash": "^4.17.21"
+  }
+}
