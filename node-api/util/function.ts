@@ -7,5 +7,4 @@ export async function getServiceHealth(Key: string) {
     const params = {Key, ... bucketParams};
     const file = await s3.getObject(params).promise();
     return file;
-
 }

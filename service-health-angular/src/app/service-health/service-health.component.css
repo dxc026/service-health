@@ -1,0 +1,17 @@
+.mat-toolbar.mat-primary{
+  background-color: #e31837;
+}
+
+.fill-remaining-space {
+  flex: 1 1 auto;
+}
+
+.mat-icon.home-button {
+  color: #FFF;
+}
+
+button{
+  background-color: #e31837;
+  text-decoration: none;
+  text-shadow: none;
+}
