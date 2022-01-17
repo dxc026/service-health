@@ -1,16 +1,51 @@
-<mat-toolbar  color="primary">Service Health
+<mat-toolbar  color="primary">
+  <mat-icon>menu</mat-icon>
+  
+  <span> &nbsp;&nbsp;Service Health</span> 
 
   <span class="fill-remaining-space"></span>
 
-  <button mat-icon-button>
     <a routerLink="/home"><mat-icon class="home-button">home</mat-icon></a>
-  </button>
+ 
 </mat-toolbar>
+<br>
+<br>
+<table class="service-table"> 
+  <!--Button to to get all statuses-->
+  <div class="statusHealth">
+    <span> Check Service Health Status: <button (click)="getServiceHealthList()">Status</button></span>
+  </div>
+  <br>
+  <!--Button to get statuses by date-->
+  <div class="statusHealth">
+    <span> Check Service Health By Date: <button (click)="getServiceHealthByDate()">Pick Date</button></span>
+  </div>
+</table>
+<div *ngIf="showServiceHealth">
+  <br>
+  <br>
+  <div><h1>Current Status:</h1></div>
+  <div *ngFor="let serviceHealth of serviceHealthList" class="service-health-div">
 
+    <!-- <div *ngIf="checkStatus(serviceHealth.status) === true"> -->
+      <i class="bi bi-check-circle-fill"></i>
+    <!-- </div> -->
 
-<div>
-  <button>Check Service Heath</button>
+    <div *ngIf="checkStatus(serviceHealth.status) === false">
+      <i class="bi bi-x-circle-fill"></i>
+    </div>
+    <h2><u>{{serviceHealth.name}}</u></h2>
+    <br>
+    <br>
+      <div *ngFor="let endpoint of serviceHealth.endpoints">
+        <h3>{{endpoint.name}}</h3>
+        <br>
+      </div>
+  </div>
 </div>
-<div>
-  <button>Check Service Health by Date</button>
+
+<div *ngIf="showServiceHealthByDate">
+  <input matInput [matDatepicker]="picker">
+  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+  <mat-datepicker #picker></mat-datepicker>
 </div>

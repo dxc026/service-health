@@ -10,8 +10,17 @@
   color: #FFF;
 }
 
-button{
+.home-button , .home{
   background-color: #e31837;
   text-decoration: none;
   text-shadow: none;
+}
+
+.service-table{
+  border: 2pth solid black;
+}
+
+.service-health-div{
+  display: flex;
+  justify-content: center;
 }
