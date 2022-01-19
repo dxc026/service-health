@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ServiceHealthList } from '../model/mock-service-health';
+import {ServiceHealthService} from "../services/service-health.service";
 
 @Component({
   selector: 'app-service-health',
@@ -12,7 +13,7 @@ export class ServiceHealthComponent implements OnInit {
   showServiceHealth: boolean = false;
   showServiceHealthByDate: boolean = false;
   isHealthy: boolean = false;
-  constructor() {}
+  constructor(private serviceHealthService: ServiceHealthService) {}
 
   ngOnInit(): void {
   }
@@ -39,5 +40,5 @@ export class ServiceHealthComponent implements OnInit {
     }
 
   }
-  
+
 }

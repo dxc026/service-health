@@ -22,5 +22,19 @@
 
 .service-health-div{
   display: flex;
-  justify-content: center;
+  justify-content: left;
+  margin-left: 250px;
+  flex-direction: column;;
+}
+
+.form-control{
+  display: flex;
+  width: 250px;
+}
+
+.subitem-div{
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+
 }
