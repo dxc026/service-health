@@ -10,11 +10,13 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { HealthDashboardComponent } from './health-dashboard/health-dashboard.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ServiceHealthComponent
+    ServiceHealthComponent,
+    HealthDashboardComponent
   ],
   imports: [
     BrowserModule,
